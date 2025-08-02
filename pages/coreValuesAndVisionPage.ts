@@ -1,4 +1,4 @@
-// This file contains locators and navigations for Core Values And Vision page
+// This file contains locators for Core Values And Vision page
 import type {Locator, Page} from '@playwright/test';
 import { getUrl } from "../utils/utils";
 
