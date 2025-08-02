@@ -22,7 +22,7 @@ test.describe('Contact form and reCAPTCHA', () => {
 
     test('Error message appears when reCAPTCHA is missing', async ({page}) => {
         await contactUsPage.nameInput.click();
-        await page.waitForTimeout(550);
+        await page.waitForTimeout(600);
         await page.keyboard.type('Иван Иванов');
         await contactUsPage.emailInput.click();
         await page.waitForTimeout(100);
