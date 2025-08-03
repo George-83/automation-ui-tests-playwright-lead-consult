@@ -30,7 +30,7 @@ test.describe('Header navigation buttons', () => {
         servicesPage = new ServicesPage(page);
         await homePage.servicesButton.click();
         await expect(page).toHaveURL(getUrl('services/'));
-        await expect(servicesPage.ourServicesPageHeader).toBeVisible();
+        await expect(servicesPage.ourServicesPageHeader).toContainText(/services/i);
     });
 
     test('Home button', async ({page}) => {
@@ -38,14 +38,14 @@ test.describe('Header navigation buttons', () => {
         await servicesPage.open();
         await homePage.homeButton.click();
         await expect(page).toHaveURL('/');
-        await expect(homePage.homePageHeader).toBeVisible();
+        await expect(homePage.homePageHeader).toContainText(/lead/i);
     });
 
     test('Contact Us button', async ({page}) => {
         contactUsPage = new ContactUsPage(page);
         await homePage.contactUsButton.click();
         await expect(page).toHaveURL(getUrl('contact-us/'));
-        await expect(contactUsPage.contactUsPageHeader).toBeVisible();
+        await expect(contactUsPage.contactUsPageHeader).toContainText(/contact/i);
     });
 
     test('Our Company button', async ({page}) => {
@@ -53,7 +53,7 @@ test.describe('Header navigation buttons', () => {
         await homePage.aboutUsButton.hover();
         await homePage.ourCompanyButton.click();
         await expect(page).toHaveURL(getUrl('about-us/'));
-        await expect(aboutUsPage.aboutUsPageHeader).toBeVisible();
+        await expect(aboutUsPage.aboutUsPageHeader).toContainText(/about/i);
     });
 
     test('Core Values And Vision button', async ({page}) => {
@@ -61,6 +61,6 @@ test.describe('Header navigation buttons', () => {
         await homePage.aboutUsButton.hover();
         await homePage.coreValuesAndVisionButton.click();
         await expect(page).toHaveURL(getUrl('core-values-and-vision/'));
-        await expect(coreValuesAndVisionPage.coreValuesAndVisionPageHeader).toBeVisible();
+        await expect(coreValuesAndVisionPage.coreValuesAndVisionPageHeader).toContainText(/values/i);
     });
 });

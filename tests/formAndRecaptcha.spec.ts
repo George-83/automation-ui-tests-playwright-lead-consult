@@ -9,6 +9,9 @@ test.describe('Contact form and reCAPTCHA', () => {
     test.beforeEach(async ({page}) => {
         contactUsPage = new ContactUsPage(page);
         await contactUsPage.open();
+        // Here we first need to wait until form is fully loaded and form API response is 200 code
+        await page.waitForResponse(response =>
+            response.url().includes('/6492/feedback/schema') && response.status() === 200);
     });
 
     test('Contact form can be filled', async () => {
@@ -20,17 +23,10 @@ test.describe('Contact form and reCAPTCHA', () => {
         await expect(contactUsPage.messageInput).toHaveValue('test message');
     });
 
-    test('Error message appears when reCAPTCHA is missing', async ({page}) => {
-        await contactUsPage.nameInput.click();
-        await page.waitForTimeout(600);
-        await page.keyboard.type('Иван Иванов');
-        await contactUsPage.emailInput.click();
-        await page.waitForTimeout(100);
-        await page.keyboard.type('office@leadconsult.eu');
-        await contactUsPage.messageInput.click();
-        await page.waitForTimeout(100);
-        await page.keyboard.type('test message');
-        await page.waitForTimeout(100);
+    test('Error message appears when reCAPTCHA is missing', async () => {
+        await contactUsPage.nameInput.fill('Иван Иванов');
+        await contactUsPage.emailInput.fill('office@leadconsult.eu');
+        await contactUsPage.messageInput.fill('test message');
         await contactUsPage.sendButton.click();
         await expect(contactUsPage.recaptchaErrorMessage).toBeVisible();
     });
