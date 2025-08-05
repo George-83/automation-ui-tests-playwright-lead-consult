@@ -1,10 +1,10 @@
-// This file contains locators and navigations for Contact Us page
-import type {Locator, Page} from '@playwright/test';
-import { getUrl } from "../utils/utils";
+/**
+ * This file contains locators and navigations for Contact Us page
+ */
+import type { Locator, Page } from '@playwright/test';
 
 export class ContactUsPage {
     readonly page: Page;
-    readonly contactUsPageUrl: string;
     readonly contactUsPageHeader: Locator;
     readonly nameInput: Locator;
     readonly emailInput: Locator;
@@ -15,7 +15,6 @@ export class ContactUsPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.contactUsPageUrl = getUrl('contact-us/');
         this.contactUsPageHeader = page.locator('h1.heading_title');
         this.nameInput = page.getByLabel(' Your Name*');
         this.emailInput = page.getByLabel(' Your Email*');
@@ -26,6 +25,6 @@ export class ContactUsPage {
 
     // This navigates to Contact Us page
     async open(){
-        await this.page.goto(this.contactUsPageUrl);
+        await this.page.goto('contact-us/');
     }
 }

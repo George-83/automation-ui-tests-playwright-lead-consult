@@ -1,4 +1,6 @@
-// This file contains UI tests for filling out the contact form and reCAPTCHA
+/**
+ * This file contains UI tests for filling out the contact form and reCAPTCHA
+ */
 import { test, expect } from "@playwright/test";
 import { ContactUsPage } from "../pages/contactUsPage";
 
@@ -9,7 +11,7 @@ test.describe('Contact form and reCAPTCHA', () => {
     test.beforeEach(async ({page}) => {
         contactUsPage = new ContactUsPage(page);
         await contactUsPage.open();
-        // Here we first need to wait until form is fully loaded and form API response is 200 code
+        // Here we first need to wait until form is fully loaded and API response returns 200 code
         await page.waitForResponse(response =>
             response.url().includes('/6492/feedback/schema') && response.status() === 200);
     });
