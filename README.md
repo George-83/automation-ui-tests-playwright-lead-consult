@@ -46,7 +46,7 @@ This project provides automated tests for the public web site [https://www.leadc
     * "Core Values And Vision" button click
 2. "About Us" page contains words "team" or "consulting
 3. "Contact Us" page contains at least one contact form element
-4. Contact form and reCAPTCHA
+4. Contact form and reCAPTCHA:
    * Contact form can be filled
    * Error message appears when reCAPTCHA is missing
 
