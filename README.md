@@ -58,4 +58,4 @@ This project provides automated tests for the public web site [https://www.leadc
 
 ## 👤 Author - Georgi Bordukov, Senior Software QA Engineer
 * LinkedIn profile - https://www.linkedin.com/in/george-bordukov/
-* Created as part of the test task for LEAD Consult, using TypeScript, and Playwright
+* Created as part of the test task for LEAD Consult, using TypeScript and Playwright
