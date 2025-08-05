@@ -26,9 +26,14 @@ test.describe('Contact form and reCAPTCHA', () => {
         await expect(contactUsPage.messageInput).toHaveValue('test message');
     });
 
+    // For that particular case we first should use .focus() action before entering data
+    // for each form field, otherwise test is flaky on "chromium" browser
     test('Error message appears when reCAPTCHA is missing', async () => {
+        await contactUsPage.nameInput.focus()
         await contactUsPage.nameInput.fill('Иван Иванов');
+        await contactUsPage.emailInput.focus()
         await contactUsPage.emailInput.fill('office@leadconsult.eu');
+        await contactUsPage.messageInput.focus()
         await contactUsPage.messageInput.fill('test message');
         await contactUsPage.sendButton.click();
         await expect(contactUsPage.recaptchaErrorMessage).toBeVisible();
