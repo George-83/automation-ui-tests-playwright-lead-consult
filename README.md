@@ -1,4 +1,4 @@
-# LEAD Consult WEB UI Testing Project
+# WEB UI Test Project №2
 
 This project provides automated tests for the public web site [https://www.leadconsult.eu](https://www.leadconsult.eu/), built using **TypeScript** and the **Playwright** framework.
 
@@ -8,17 +8,17 @@ This project provides automated tests for the public web site [https://www.leadc
 📁 project-root/
 │
 ├── 📁 pages/                      # Page Object Model (POM). Contains locators and navigations for pages
-│   ├── aboutUsPage.ts
-│   ├── contactUsPage.ts
-│   ├── coreValuesAndVisionPage.ts
-│   ├── homePage.ts
-│   └── servicesPage.ts
+│   ├── about-us-page.ts
+│   ├── contact-us-page.ts
+│   ├── core-values-and-vision-page.ts
+│   ├── home-page.ts
+│   └── services-page.ts
 │
 ├── 📁 tests/                      # Test modules organized by scenarios
-│   ├── aboutUs.spec.ts
-│   ├── contactUs.spec.ts
-│   ├── formAndRecaptcha.spec.ts
-│   └── headerButtons.spec.ts
+│   ├── about-us.spec.ts
+│   ├── contact-us.spec.ts
+│   ├── form-and-recaptcha.spec.ts
+│   └── header-buttons.spec.ts
 │
 ├── 📁 utils/                      # General-purpose utility functions
 │   └── utils.ts
@@ -58,4 +58,4 @@ This project provides automated tests for the public web site [https://www.leadc
 
 ## 👤 Author - Georgi Bordukov, Senior Software QA Engineer
 * LinkedIn profile - https://www.linkedin.com/in/george-bordukov/
-* Created as part of the test task for LEAD Consult, using TypeScript and Playwright
+* This project was developed as part of a technical assessment for a QA position, using TypeScript and Playwright

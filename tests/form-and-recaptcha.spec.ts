@@ -2,7 +2,7 @@
  * This file contains UI tests for filling out the contact form and reCAPTCHA
  */
 import { test, expect } from "@playwright/test";
-import { ContactUsPage } from "../pages/contactUsPage";
+import { ContactUsPage } from "../pages/contact-us-page";
 
 test.describe('Contact form and reCAPTCHA', () => {
     let contactUsPage: ContactUsPage;

@@ -2,7 +2,7 @@
  * This file contains UI test for checking that About Us page contains words "team" or "consulting"
  */
 import { test, expect } from "@playwright/test";
-import { AboutUsPage } from "../pages/aboutUsPage";
+import { AboutUsPage } from "../pages/about-us-page";
 import { getPageText } from "../utils/utils";
 
 

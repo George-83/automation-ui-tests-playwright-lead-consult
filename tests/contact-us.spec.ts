@@ -5,7 +5,7 @@
  *  "Send" button
  */
 import { test, expect } from "@playwright/test";
-import { ContactUsPage } from "../pages/contactUsPage";
+import { ContactUsPage } from "../pages/contact-us-page";
 
 test('At least one contact form element is visible', async ({page}) => {
     const contactUsPage = new ContactUsPage(page);

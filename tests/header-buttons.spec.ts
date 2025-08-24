@@ -2,11 +2,11 @@
  * This file contains UI tests for header navigation buttons
  */
 import { test, expect } from "@playwright/test";
-import { HomePage } from "../pages/homePage";
-import { AboutUsPage } from "../pages/aboutUsPage";
-import { CoreValuesAndVisionPage } from "../pages/coreValuesAndVisionPage";
-import { ServicesPage } from "../pages/servicesPage";
-import { ContactUsPage } from "../pages/contactUsPage";
+import { HomePage } from "../pages/home-page";
+import { AboutUsPage } from "../pages/about-us-page";
+import { CoreValuesAndVisionPage } from "../pages/core-values-and-vision-page";
+import { ServicesPage } from "../pages/services-page";
+import { ContactUsPage } from "../pages/contact-us-page";
 
 test.describe('Header navigation buttons', () => {
     let homePage: HomePage;
